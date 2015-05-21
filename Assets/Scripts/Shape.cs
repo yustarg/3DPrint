@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Shape : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+namespace com.yhw.tdPrint {
+
+	public class Shape {
+		private List<Point> mPoints;
+		public List<Point> Points {
+			get { return mPoints; }
+		}
+
+		public Shape() {
+			mPoints = new List<Point>();
+		}
+
+		public void AddPoint(Point p) {
+			mPoints.Add(p);
+		}
+
+		public bool isSelectd(Point p) {
+			return false;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

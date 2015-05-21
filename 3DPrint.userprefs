@@ -1,9 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Point.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Painter.cs">
     <Files>
-      <File FileName="Assets/Scripts/Point.cs" Line="5" Column="23" />
+      <File FileName="Assets/Scripts/Point.cs" Line="8" Column="3" />
+      <File FileName="Assets/Scripts/Painter.cs" Line="21" Column="65" />
+      <File FileName="Assets/Scripts/Drawing.cs" Line="19" Column="7" />
+      <File FileName="Assets/NGUI/Scripts/UI/UITexture.cs" Line="61" Column="34" />
+      <File FileName="Assets/Scripts/Shape.cs" Line="11" Column="26" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="Painter.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
