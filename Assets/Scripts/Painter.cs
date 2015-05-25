@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace com.yhw.tdPrint {
 	
-	public class Painter : MonoBehaviour {
+	public class Painter : MonoBehaviour, IEventHandler {
 
 		private Texture2D mTransparentLayer;
 		[SerializeField]
@@ -15,6 +15,7 @@ namespace com.yhw.tdPrint {
 
 		void Awake() {
 			CreateTransparentLayer();
+			EventDispatcher.Instance.Register (EventDispatcher.EVT_CLICK_LINE_TOOL, gameObject);
 		}
 
 		private void CreateTransparentLayer() {
@@ -54,10 +55,10 @@ namespace com.yhw.tdPrint {
 		
 		}
 
-		void OnGUI() {
-			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), mBaseTexture);
-			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), mTransparentLayer);
-		}
+//		void OnGUI() {
+//			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), mBaseTexture);
+//			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), mTransparentLayer);
+//		}
 
 		private void On_Swipe(Gesture gesture) {
 	//		gesture.
@@ -76,6 +77,16 @@ namespace com.yhw.tdPrint {
 		private void On_SwipeEnd(Gesture gesture) {
 			Debug.Log("on_swipeEnd");
 		}
+
+		#region IEventHandler implementation
+
+		public bool DoEvent (Event evt)
+		{
+			Debug.LogWarning ("evt " + evt.eventId);
+			return true;
+		}
+
+		#endregion
 	}
 
 }
